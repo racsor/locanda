@@ -22,37 +22,17 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>exec-maven-plugin</artifactId>
-						<version>1.2.1</version> 
+						<version>1.2.1</version>
 						<executions>
-							<!-- <execution> 
-								<phase>compile</phase> 
-								<goals> 
-									<goal>java</goal> 
-								</goals> 
-								<configuration> 
-									<mainClass>org.hsqldb.server.Server</mainClass> 
-									<arguments> 
-										<argument>-database.0</argument> 
-										<argument>file:hsql/locanda.sql</argument> 
-										<argument>-dbname.0</argument> 
-										<argument>locanda</argument>
-										<argument>&amp;</argument>
-									</arguments> 
-								</configuration>
-							</execution>  -->
-							<!-- <execution>
-								<phase>compile</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>hsql/runserver.sh</executable>
-									<arguments>
-										<argument>locanda.sql</argument>
-										<argument>&amp;</argument>
-									</arguments>
-								</configuration>
-							</execution> -->
+							<!-- <execution> <phase>compile</phase> <goals> <goal>java</goal> 
+								</goals> <configuration> <mainClass>org.hsqldb.server.Server</mainClass> 
+								<arguments> <argument>-database.0</argument> <argument>file:hsql/locanda.sql</argument> 
+								<argument>-dbname.0</argument> <argument>locanda</argument> <argument>&amp;</argument> 
+								</arguments> </configuration> </execution> -->
+							<!-- <execution> <phase>compile</phase> <goals> <goal>exec</goal> 
+								</goals> <configuration> <executable>hsql/runserver.sh</executable> <arguments> 
+								<argument>locanda.sql</argument> <argument>&amp;</argument> </arguments> 
+								</configuration> </execution> -->
 						</executions>
 					</plugin>
 				</plugins>
@@ -128,6 +108,9 @@
 					<url>http://localhost:8080/manager/text</url>
 					<server>tomcat_server</server>
 					<path>/locanda</path>
+					<username>tomcat</username>
+					<password>tomcat</password>
+					<update>true</update>
 				</configuration>
 			</plugin>
 		</plugins>
